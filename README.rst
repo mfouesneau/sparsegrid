@@ -21,6 +21,44 @@ This library currently implements Smolyak's algorithm for two polynomial bases:
 
 All goes through the same interface class `SparseInterpolator`.
 
+Example
+-------
+
+.. code:: python
+
+    import numpy as np
+    from sparsegrid import SparseInterpolator
+    
+    
+
+    def func(x):
+        """ Example function for 2d data """
+        func2d = ((
+            0.5 / np.pi * x[:, 0] -
+            .51 / (.4 * np.pi ** 2) * x[:, 0] ** 2 +
+            x[:, 1] - (.6)) ** 2 + (1 - 1 / (.8 * np.pi)) * np.cos(x[:, 0]) + .10)
+        return func2d
+    
+    dim = 2                   # Dimensionality of function to interpolate
+    level_max = 6             # Maximum degree of interpolation
+    shape = Nx, Ny = 21, 21   # values on x and y
+
+    Ntot = Nx * Ny
+    x = np.linspace(0, 1, Nx)
+    y = np.linspace(0, 1, Ny)
+    X,  Y = np.meshgrid(x, y)
+    gridout = np.asarray([X.reshape(Ntot), Y.reshape(Ntot)]).T
+
+    integration_interval = np.asarray([[0.0, 1.0], [0.0, 1.0]]).T
+    interpolation_type = 'CH'
+    interp = SparseInterpolator(level_max, dim, 
+                                interpolation_type, 
+                                intergration_interval)
+    # fitting returns also the interpolated values
+    output = interp.fit(func, gridout)
+    # one can evaluate the interpolation at any other point futher on
+    output = interp.evaluate(gridout)
+
 
 Method
 ------
