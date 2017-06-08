@@ -15,6 +15,7 @@ The major updates are based on code cleaning and interface. Note that I did not
 optimize the code for speed (yet).
 
 This library currently implements Smolyak's algorithm for two polynomial bases:
+
 * Clenshaw-Curtis - Piecewise Linear Basis Functions
 * Chebyshev Polynomials - Cos Basis Functions
 
@@ -41,10 +42,8 @@ of Smolyak grid points is then deterministic:
 
 .. math::
 
-    n(d = 1) = 1 + 2 d,
-
-    n(d = 2) = 1 + 4d + 4d(d-1)
-
+    n(d = 1) = 1 + 2 d, \\
+    n(d = 2) = 1 + 4d + 4d(d-1) \\
     ...
 
 Notice that the number of grid points grows linearly with :math:`d = 1`, and
