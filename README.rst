@@ -28,8 +28,6 @@ Example
 
     import numpy as np
     from sparsegrid import SparseInterpolator
-    
-    
 
     def func(x):
         """ Example function for 2d data """
