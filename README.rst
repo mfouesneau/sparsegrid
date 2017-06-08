@@ -42,8 +42,8 @@ of Smolyak grid points is then deterministic:
 
 .. math::
 
-    n(d = 1) = 1 + 2 d, \\
-    n(d = 2) = 1 + 4d + 4d(d-1) \\
+    n(d = 1) = 1 + 2 d, 
+    n(d = 2) = 1 + 4d + 4d(d-1),
     ...
 
 Notice that the number of grid points grows linearly with :math:`d = 1`, and
@@ -71,14 +71,12 @@ A few implementation examples are:
 References
 ----------
 
-* Barthelmann, V., E. Novak, and K. Ritter, 2000, High dimensional polynomial
-  interpolation on sparse grids, Adv. in Comput. Math., 12, 273–288.
-* Smolyak, S., 1963, Quadrature and interpolation formulas for tensor products
-  of certain classes of functions, Soviet Math. Dokl., 4, 240-243.
-* Waldvogel, J., 2003, Fast construction of the Fejér and Clenshaw-Curtis
-  quadrature rules, BIT Numerical Mathematics, 43(1), 1-18.
+* Barthelmann, V., E. Novak, and K. Ritter, 2000, High dimensional polynomial interpolation on sparse grids, Adv. in Comput. Math., 12, 273–288.
+* Gordon (2011)
 * Krueger and Kubler (2004)
 * Klemke and Wohlmuth (2005)
 * Malin, Krueger, and Kubler (2007)
 * Malin, Krueger, and Kubler (2011)
-* Gordon (2011)
+* Smolyak, S., 1963, Quadrature and interpolation formulas for tensor products of certain classes of functions, Soviet Math. Dokl., 4, 240-243.
+* Waldvogel, J., 2003, Fast construction of the Fejér and Clenshaw-Curtis quadrature rules, BIT Numerical Mathematics, 43(1), 1-18.
+
