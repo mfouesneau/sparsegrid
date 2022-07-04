@@ -51,7 +51,7 @@ Example
     interpolation_type = 'CH'
     interp = SparseInterpolator(level_max, dim, 
                                 interpolation_type, 
-                                intergration_interval)
+                                integration_interval)
     # fitting returns also the interpolated values
     output = interp.fit(func, gridout)
     # one can evaluate the interpolation at any other point futher on
