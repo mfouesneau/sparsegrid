@@ -488,7 +488,7 @@ class SparseInterpolator():
         """
         if nsamples == 0:
             nodes = 0.5 * np.ones(shape=(1, dimensions), dtype=float)
-            indx_out = np.asarray([0]*dimension)
+            indx_out = np.asarray([0]*dimensions)
             nnodes = [1]
             return nodes, nnodes, indx_out
 
